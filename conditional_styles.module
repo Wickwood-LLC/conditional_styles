@@ -1,0 +1,22 @@
+<?php
+// $Id$
+
+/**
+ * Implements HOOK_theme().
+ */
+function conditional_styles_theme($existing, $type, $theme, $path) {
+  include_once './' . drupal_get_path('module', 'conditional_styles') . '/conditional_styles.theme.inc';
+  return _conditional_styles_theme($existing, $type, $theme, $path);
+}
+
+/**
+ * Retrieve the conditional stylesheets.
+ *
+ * @param $theme
+ *   The name of the theme.
+ * @return
+ *   A string containing the rendered conditional comments with stylesheet links.
+ */
+function conditional_styles_get($theme) {
+  return variable_get($theme . '_conditional_styles', '');
+}
