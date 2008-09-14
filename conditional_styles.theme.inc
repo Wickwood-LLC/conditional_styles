@@ -39,7 +39,7 @@ function conditional_styles_paths_to_basetheme($theme) {
 function _conditional_styles_theme($existing, $type, $theme, $path) {
   // Process the conditional stylesheets.
   $themes = list_themes();
-  $paths = conditional_styles_paths_to_basetheme();
+  $paths = conditional_styles_paths_to_basetheme($theme);
 
   // Grab all the conditional stylesheets.
   $stylesheets = array();
