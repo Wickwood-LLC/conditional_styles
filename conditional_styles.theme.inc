@@ -39,6 +39,7 @@ function _conditional_styles_theme($existing, $type, $theme, $path) {
   // implementation: foreach ($array AS $key => &$value) {}
 
   // Process the conditional stylesheets for every active theme.
+  global $language;
   $themes = list_themes();
   foreach (array_keys($themes) AS $theme) {
     // We only need to process active themes.
@@ -74,6 +75,12 @@ function _conditional_styles_theme($existing, $type, $theme, $path) {
               // Don't allow non-existent stylesheets to clutter the logs with 404.
               if (file_exists("./$path/$file")) {
                 $output .= "<link type=\"text/css\" rel=\"stylesheet\" media=\"$media\" href=\"$base_path$path/$file$query_string\" />\n";
+                if ($language->direction == LANGUAGE_RTL){
+                  $file_rtl = str_replace('.css', '-rtl.css', $file);
+                  if (file_exists("./$path/$file_rtl")) {
+                    $output .= "<link type=\"text/css\" rel=\"stylesheet\" media=\"$media\" href=\"$base_path$path/$file_rtl$query_string\" />\n";
+                  }
+                }
               }
             }
           }
