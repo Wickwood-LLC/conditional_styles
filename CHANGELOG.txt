@@ -1,2 +1,5 @@
+Conditional Styles 6.x-1.x-dev
+  * Added support for maintenance theme page (pending #454462)
+
 Conditional Styles 6.x-1.0
   * Initial release.
