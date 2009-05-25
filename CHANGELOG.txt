@@ -1,4 +1,5 @@
 Conditional Styles 6.x-1.x-dev
+  #389988 by BWPanda: Add clear cache' reminder to documentation
   #337975 by tombigel: Add missing support for RTL languages
   * Added support for maintenance theme page (pending #454462)
 
