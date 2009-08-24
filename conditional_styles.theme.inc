@@ -43,7 +43,7 @@ function _conditional_styles_theme($existing, $type, $theme, $path) {
   $themes = list_themes();
   foreach (array_keys($themes) AS $theme) {
     // We only need to process active themes.
-    if ($themes[$theme]->status) {
+    if ($themes[$theme]->status || $GLOBALS['theme'] == $theme) {
       $paths = conditional_styles_paths_to_basetheme($theme);
 
       // Grab all the conditional stylesheets.
