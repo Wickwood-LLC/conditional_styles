@@ -5,6 +5,13 @@
  */
 
 /**
+ * Implements HOOK_enable().
+ */
+function conditional_styles_enable() {
+  drupal_theme_rebuild();
+}
+
+/**
  * Implements hook_uninstall().
  */
 function conditional_styles_uninstall() {
