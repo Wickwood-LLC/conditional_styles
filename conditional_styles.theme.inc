@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /**
  * @file
  * Allows themes to add conditional stylesheets.

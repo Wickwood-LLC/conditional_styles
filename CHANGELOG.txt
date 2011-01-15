@@ -1,5 +1,3 @@
-// $Id$
-
 Conditional Styles 6.x-1.x-dev, xxxx-xx-xx
 --------------------------------------
 - When db is down, allow include file to work from within themes (like Zen).

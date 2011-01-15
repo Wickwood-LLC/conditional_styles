@@ -1,5 +1,3 @@
-; $Id$
-
 name = "Conditional Stylesheets"
 description = "Allows themes to add conditional stylesheets."
 

@@ -1,5 +1,3 @@
-// $Id$
-
 ABOUT CONDITIONAL STYLESHEETS
 -----------------------------
 
