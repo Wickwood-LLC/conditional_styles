@@ -1,4 +1,4 @@
 name = "Conditional Stylesheets"
 description = "Allows themes to add conditional stylesheets."
 
-core = 6.x
+core = 7.x

@@ -37,12 +37,12 @@ The syntax for that is:
 For example, to add a stylesheet that only targets IE 6 and below, use:
   conditional-stylesheets[if lt IE 7][all][] = ie6-and-below.css
 
-And to add a print stylesheet for IE8 only, use:
-  conditional-stylesheets[if IE 8][print][] = ie8.css
+And to add a print stylesheet for IE9 only, use:
+  conditional-stylesheets[if IE 9][print][] = ie9.css
 
 
 *** IMPORTANT ***
 
-Drupal 6 also stores a cache of the data in .info files. If you modify any lines
-in your theme's .info file, you MUST refresh Drupal 6's cache by simply visiting
-the admin/build/themes page.
+Drupal 7 also stores a cache of the data in .info files. If you modify any lines
+in your theme's .info file, you MUST refresh Drupal 7's cache by simply visiting
+the Appearance page at admin/appearance.

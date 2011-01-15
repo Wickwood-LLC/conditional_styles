@@ -1,3 +1,7 @@
+Conditional Styles 7.x-1.x-dev, xxxx-xx-xx
+------------------------------------------
+- #1027844: Port to Drupal 7
+
 Conditional Styles 6.x-1.x-dev, xxxx-xx-xx
 --------------------------------------
 - When db is down, allow include file to work from within themes (like Zen).
