@@ -1,5 +1,6 @@
 Conditional Styles 7.x-1.x-dev, xxxx-xx-xx
 ------------------------------------------
+- #1030830: Add tests
 - #1029696: Update .info syntax to use expression expected by drupal_pre_render_conditional_comments()
 - #1027844: Port to Drupal 7
 
