@@ -2,3 +2,6 @@ name = "Conditional Stylesheets"
 description = "Allows themes to add conditional stylesheets."
 
 core = 7.x
+
+files[] = conditional_styles.install
+files[] = conditional_styles.module
