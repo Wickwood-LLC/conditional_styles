@@ -1,0 +1,8 @@
+name = "Conditional Stylesheets Tests"
+package = Testing
+
+core = 7.x
+hidden = TRUE
+dependencies[] = conditional_styles
+
+files[] = conditional_styles_test.module

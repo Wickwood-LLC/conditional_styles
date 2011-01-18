@@ -5,3 +5,4 @@ core = 7.x
 
 files[] = conditional_styles.install
 files[] = conditional_styles.module
+files[] = tests/conditional_styles.test
