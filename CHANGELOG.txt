@@ -1,6 +1,6 @@
 Conditional Styles 7.x-2.x-dev, xxxx-xx-xx
 ------------------------------------------
--
+- #1478242: Weight needed for conditional stylesheets added via drupal_add_css()
 
 Conditional Styles 7.x-2.0, 2011-01-18
 --------------------------------------
