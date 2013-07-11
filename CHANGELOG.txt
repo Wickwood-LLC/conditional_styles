@@ -1,6 +1,6 @@
-Conditional Styles 7.x-2.x-dev, xxxx-xx-xx
+Conditional Styles 7.x-2.2, 2013-07-12
 ------------------------------------------
--
+- #580440 by quicksketch: Add support for Downlevel-revealed Conditional Comments
 
 Conditional Styles 7.x-2.1, 2012-03-12
 --------------------------------------
