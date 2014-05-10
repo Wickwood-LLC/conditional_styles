@@ -1,7 +1,0 @@
-name = Conditional stylesheets test sub-theme
-description = Test theme which uses update_test_basetheme as the base theme.
-
-base theme = conditional_styles_basetheme
-hidden = TRUE
-
-stylesheets-conditional[gte IE 1]['all'][] = sub-style.css

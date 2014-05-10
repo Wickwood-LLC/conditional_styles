@@ -1,0 +1,6 @@
+name: Conditional Stylesheets
+type: module
+description: 'Allows themes to add conditional stylesheets.'
+package: Other
+version: VERSION
+core: 8.x
