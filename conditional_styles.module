@@ -5,31 +5,33 @@
  * Adds conditional CSS from the .info file.
  */
 
+use \Drupal\Component\Utility\Unicode;
+
 /**
- * Implements hook_page_build().
+ * Implements hook_css_alter().
  */
-function conditional_styles_page_build(&$page) {
+function conditional_styles_css_alter(&$css, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
   $theme_handler = \Drupal::service('theme_handler');
-  $themes        = $theme_handler->listInfo(); 
-  foreach ($themes as $theme) {
-    $theme_path = drupal_get_path($theme->type, $theme->name);
-    if (isset($theme->info['stylesheets-conditional']) && $theme->status) {
-      foreach ($theme->info['stylesheets-conditional'] as $condition => $medias) {
-        foreach ($medias as $media => $stylesheets) {
-	        foreach ($stylesheets as $stylesheet) {
-	        	$full_path = $theme_path . '/' . $stylesheet;
-	          $page['#attached']['css'][$full_path] = array(
-          		'group' => CSS_THEME,
-          		'weight' => 999,
-          		'media' => $media,
-          		'every_page' => TRUE,
-              'browsers' => array(
-                'IE'  => $condition,
-                '!IE' => strpos($condition, '!IE') === FALSE ? FALSE : TRUE,
-              ),
-	          );
-	        }
-        }
+  $current_theme = $theme_handler->getDefault();
+  $path = drupal_get_path('theme', $current_theme);
+  $info = $theme_handler->getTheme($current_theme)->info;
+  if (!empty($info['conditional-stylesheets'])) {
+    foreach ($info['conditional-stylesheets'] as $version => $media) {
+      foreach ($media as $key => $file_path) {
+        $full_path = "{$path}/{$file_path}";
+        $css[$full_path] = [
+          'group' => CSS_THEME,
+          'weight' => 999,
+          'type' => 'file',
+          'preprocess' => TRUE,
+          'data' => $full_path,
+          'media' => $key,
+          'every_page' => TRUE,
+          'browsers' => [
+            'IE'  => $version,
+            '!IE' => (Unicode::strpos($version, '!IE') !== FALSE),
+          ],
+        ];
       }
     }
   }

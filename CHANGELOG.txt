@@ -1,3 +1,7 @@
+Conditional Styles 8.x-1.x, 2016-01-30
+------------------------------------------
+- #2220547 by nginex: Added Drupal 8 support
+
 Conditional Styles 7.x-2.2, 2013-07-12
 ------------------------------------------
 - #580440 by quicksketch: Add support for Downlevel-revealed Conditional Comments
